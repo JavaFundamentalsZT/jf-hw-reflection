@@ -14,7 +14,6 @@ The task is to implement a simplistic test execution engine.
 
   1. getClasses(String packageName) : find all test classes in a given package
   2. getMethods(Class<?> clazz) : find all tests in a test class
-  3. executeTest(Method method) : execute single test
   4. printSummary(Class<?> clazz) : after test class execution, the program should print summary of the executed tests
 
 * The expected behavior:
