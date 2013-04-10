@@ -30,4 +30,10 @@ public class FibTest {
     assertEquals(55, result);
   }
 
+  @Test
+  public void find15thFibonacciNumberWithFailure() {
+    int result = fib.calculate(15);
+    assertEquals(55, result);
+  }
+
 }

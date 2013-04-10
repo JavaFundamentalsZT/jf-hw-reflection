@@ -8,30 +8,34 @@ public class TestExecutor {
     Class[] classes = getClasses(packageName);
     for (Class<?> clazz : classes) {
       executeTests(clazz);
-      printSummary(clazz);
     }
   }
 
   // you may change the method signature as you like
   private static void executeTests(Class<?> clazz) {
     Method[] methods = getMethods(clazz);
-    for (Method method : methods) {
-      try {
-        executeTest(method);
-        System.out.println("SUCCESS:" + method.getName());
-      } catch (Exception e) {
-        System.out.println("FAILURE:" + method.getName() + ": " + e.getMessage());
+    try {
+      Object instance = clazz.newInstance();
+      for (Method method : methods) {
+        executeTest(instance, method);
       }
+      printSummary(instance);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-
   }
 
-  private static void printSummary(Class<?> clazz) {
-    throw new UnsupportedOperationException("implement test class execution summary");
+  private static void executeTest(Object instance, Method method) {
+    try {
+      method.invoke(instance);
+      System.out.println("SUCCESS: " + instance.getClass().getSimpleName() + "." + method.getName());
+    } catch (Exception e) {
+      System.out.println("FAILURE: " + instance.getClass().getSimpleName() + "." + method.getName() + ": " + e.getCause().getMessage());
+    }
   }
 
-  private static void executeTest(Method method) throws Exception {
-    throw new UnsupportedOperationException("implement test execution procedure");
+  private static void printSummary(Object instance) {
+    throw new UnsupportedOperationException("implement printing summary");
   }
 
   private static Method[] getMethods(Class<?> clazz) {
