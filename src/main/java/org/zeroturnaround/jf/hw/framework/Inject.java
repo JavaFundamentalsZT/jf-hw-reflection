@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface Inject {
 
-  Class<?> clazz();
+  Class<?> value();
 
 }

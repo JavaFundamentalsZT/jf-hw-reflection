@@ -10,7 +10,7 @@ import static org.zeroturnaround.jf.hw.framework.Assert.assertEquals;
 @Test
 public class FibTest {
 
-  @Inject(clazz = Fib.class)
+  @Inject(Fib.class)
   Fibonacci fib;
 
   @Test
