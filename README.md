@@ -13,8 +13,7 @@ The task is to implement a simplistic test execution engine.
 * Tests are executed by TestExecutor class and you will have to implement the missing methods:
 
   1. getClasses(String packageName) : find all test classes in a given package
-  2. getMethods(Class<?> clazz) : find all tests in a test class
-  4. printSummary(Class<?> clazz) : after test class execution, the program should print summary of the executed tests
+  2. executeTests(Class<?> clazz) : execute the tests for a given class (instance)
 
 * Expected behavior:
 
@@ -28,6 +27,16 @@ Here's the expected output from FibTest execution:
     FAILURE: FibTest.find15thFibonacciNumberWithFailure: EXPECTED: 55, ACTUAL: 610
     SUMMARY: EXECUTED 4, PASSED 3, FAILED 1, BUSINESS METHODS INVOKED 5
 
+Notes:
 
-Every test class (see examples in *org.zeroturnaround.jf.hw.tests*) includes a field that represents the unit under test. 
-Test engine should count the method invocations for that object using a dynamic proxy and print the results into summary line (e.g. *SUMMARY: EXECUTED 4, PASSED 3,  FAILED 1*).
+EXECUTED 4 - FibTest has 4 methods marked with @Test annotation and 4 of them were executed
+    
+PASSED 3 - 3 tests passed successfully
+    
+FAILED 1 - 1 test failed (find15thFibonacciNumberWithFailure)
+    
+BUSINESS METHODS INVOKED 5 - fib.calculate() was invoked 5 times
+
+
+
+
