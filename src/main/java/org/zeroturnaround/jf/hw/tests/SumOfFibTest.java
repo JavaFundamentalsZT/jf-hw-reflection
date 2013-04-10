@@ -12,7 +12,7 @@ import static org.zeroturnaround.jf.hw.framework.Assert.assertEquals;
 public class SumOfFibTest implements TestCase {
 
   @Inject(SumOfFib.class)
-  SumOfFibonacci sumOfFib;
+  private SumOfFibonacci sumOfFib;
 
   @Test
   @Expected(RuntimeException.class)
