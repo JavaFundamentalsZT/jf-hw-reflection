@@ -26,14 +26,12 @@ public class FibTest {
 
   @Test
   public void find10thFibonacciNumber() {
-    int result = fib.calculate(10);
-    assertEquals(55, result);
+    assertEquals(55, fib.calculate(10));
   }
 
   @Test
   public void find15thFibonacciNumberWithFailure() {
-    int result = fib.calculate(15);
-    assertEquals(55, result);
+    assertEquals(55, fib.calculate(15));
   }
 
 }
