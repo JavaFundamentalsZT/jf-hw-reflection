@@ -26,7 +26,7 @@ Here's the expected output from FibTest execution:
     SUCCESS: FibTest.find2ndAnd3rdFibonacciNumber
     SUCCESS: FibTest.find10thFibonacciNumber
     FAILURE: FibTest.find15thFibonacciNumberWithFailure: EXPECTED: 55, ACTUAL: 610
-    SUMMARY: EXECUTED 4, PASSED 3,  FAILED 1
+    SUMMARY: EXECUTED 4, PASSED 3, FAILED 1, BUSINESS METHODS INVOKED 5
 
 
 Every test class (see examples in *org.zeroturnaround.jf.hw.tests*) includes a field that represents the unit under test. 
