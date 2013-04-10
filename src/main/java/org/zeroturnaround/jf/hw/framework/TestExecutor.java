@@ -2,7 +2,7 @@ package org.zeroturnaround.jf.hw.framework;
 
 import java.lang.reflect.Method;
 
-public class TestSuite {
+public class TestExecutor {
 
   public static void execute(String packageName) {
     Class[] classes = getClasses(packageName);
