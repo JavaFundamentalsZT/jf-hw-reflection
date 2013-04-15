@@ -22,7 +22,7 @@ public void compareIntegers() {
     assertEquals(4, 5);
 }
 ```
-In the example above, the equality assertion for the numbers 4 and 5 will throw RuntimeException. The test engine should handle the exception: if the method is marked with @Declared annotation and the annotation parameter matches the exception that was thrown by test method execution, then the test should be considered as successful.
+In the example above, the equality assertion for the numbers 4 and 5 will throw RuntimeException. The test engine should handle the exception: if the method is marked with @Expected annotation and the annotation parameter matches the exception that was thrown by test method execution, then the test should be considered as successful.
 
   3. @Inject - injects a proxy into a field for the specified class instance, e.g: 
 ```java
