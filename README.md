@@ -24,6 +24,11 @@ public void compareIntegers() {
 ```
 In the example above, the equality assertion for the numbers 4 and 5 will throw RuntimeException. The test engine should handle the exception: if the method is marked with @Expected annotation and the annotation parameter matches the exception type that was thrown by test method execution, then the test should be considered as successful.
 
+*NB!* In case if the test method doesn't throw an exception but it is annotated with @Expected, then the test should be considered as FAILED, since we are expecting that the test to fail and it doesn't - so it doesn't meet our exepectations.
+
+*NB!* If the test throws an exception which is subclass of the declared exception type, then it is a valid situation and the test should be marked as a successful one.
+
+
   3. @Inject - injects a proxy into a field for the specified class instance, e.g: 
 ```java
 @Inject(Fib.class)
