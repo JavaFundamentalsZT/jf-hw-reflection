@@ -26,28 +26,28 @@ import static org.zeroturnaround.jf.hw.framework.Assert.assertEquals;
 @Test
 public class FibTest {
 
-  @Inject(Fib.class)
-  Fibonacci fib;
+	@Inject(Fib.class)
+	Fibonacci fib;
 
-  @Test
-  public void find1stFibonacciNumber() {
-    assertEquals(1, fib.calculate(1));
-  }
+	@Test
+	public void find1stFibonacciNumber() {
+		assertEquals(1, fib.calculate(1));
+	}
 
-  @Test
-  public void find2ndAnd3rdFibonacciNumber() {
-    assertEquals(1, fib.calculate(2));
-    assertEquals(2, fib.calculate(3));
-  }
+	@Test
+	public void find2ndAnd3rdFibonacciNumber() {
+		assertEquals(1, fib.calculate(2));
+		assertEquals(2, fib.calculate(3));
+	}
 
-  @Test
-  public void find10thFibonacciNumber() {
-    assertEquals(55, fib.calculate(10));
-  }
+	@Test
+	public void find10thFibonacciNumber() {
+		assertEquals(55, fib.calculate(10));
+	}
 
-  @Test
-  public void find15thFibonacciNumberWithFailure() {
-    assertEquals(55, fib.calculate(15));
-  }
+	@Test
+	public void find15thFibonacciNumberWithFailure() {
+		assertEquals(55, fib.calculate(15));
+	}
 
 }

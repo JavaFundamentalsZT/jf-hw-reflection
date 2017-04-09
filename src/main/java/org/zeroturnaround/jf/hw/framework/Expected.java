@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Expected {
 
-  Class<?> value();
+	Class<?> value();
 
 }

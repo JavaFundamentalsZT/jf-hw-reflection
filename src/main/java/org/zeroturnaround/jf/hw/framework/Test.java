@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  *                        --- Your C.O.
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.TYPE})
+@Target({ ElementType.METHOD, ElementType.TYPE })
 public @interface Test {
 
 }

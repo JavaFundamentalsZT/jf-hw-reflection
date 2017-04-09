@@ -11,17 +11,17 @@ import static org.zeroturnaround.jf.hw.framework.Assert.assertEquals;
 
 public class SumOfFibTest implements TestCase {
 
-  @Inject(SumOfFib.class)
-  private SumOfFibonacci sumOfFib;
+	@Inject(SumOfFib.class)
+	private SumOfFibonacci sumOfFib;
 
-  @Test
-  @Expected(RuntimeException.class)
-  public void sumOf10Elements() {
-    assertEquals(100, sumOfFib.calculate(10)); //expected to fail
-  }
+	@Test
+	@Expected(RuntimeException.class)
+	public void sumOf10Elements() {
+		assertEquals(100, sumOfFib.calculate(10)); //expected to fail
+	}
 
-  @Test
-  public void sumOf5Elements() {
-    assertEquals(7, sumOfFib.calculate(5));
-  }
+	@Test
+	public void sumOf5Elements() {
+		assertEquals(7, sumOfFib.calculate(5));
+	}
 }

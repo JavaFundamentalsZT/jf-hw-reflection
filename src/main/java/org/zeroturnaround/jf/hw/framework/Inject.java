@@ -5,7 +5,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
 /**
  * Marks a class member as injectable,
  * meaning that the framework should inject
@@ -15,6 +14,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface Inject {
 
-  Class<?> value();
+	Class<?> value();
 
 }
