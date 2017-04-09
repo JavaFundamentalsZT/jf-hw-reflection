@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Marks a class as a test class
  * Marks a method as a test method
- *                        --- Your K.O.
+ *                        --- Your C.O.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
