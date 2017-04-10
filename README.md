@@ -34,7 +34,7 @@ In the example above, the equality assertion for the numbers 4 and 5 will throw 
 @Inject(Fib.class)
 Fibonacci fib;
 ```  
-  
+ The proxy should count the invocations of the target methods. Print the total number of invocations in the execution summary. 
 
 #### Tests are executed by TestExecutor class and you will have to implement the missing methods:
 
